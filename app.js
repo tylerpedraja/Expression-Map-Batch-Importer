@@ -117,7 +117,7 @@ fs.readdir(FILEPATH, (err, files) => {
                location2 = json.InstrumentMap.member[1].list[0].obj
                location2.push(elem2.obj)
 
-               // Convert back to XML and write to file...
+               // Convert back to XML and write to output folder...
                var builder = new xml2js.Builder();
                var xml = builder.buildObject(json);
 
