@@ -3,13 +3,13 @@ const path = require("path");
 const { parseString } = require("xml2js");
 xml2js = require("xml2js");
 
-// filepath to directory of the the expression maps you want to add to.
+// filepath to directory of the the expression maps you want to edit.
 const FILEPATH = `C:/Users/${USER}/Desktop/...`;
 
-// filepath of the directory you want to save the edited maps to.
+// filepath of the directory you want to save the edited expression maps to.
 const OUTPUT_FOLDER = `C:/Users/${USER}/Desktop/...`;
 
-// Create the articulation/layering of whatever instrument you want in cubase, then open the file a code editor. Take the articulations <obj /> node and paste it here....
+// Create the articulation/layering of whatever instrument you want in cubase, then open that expression map in a code editor. Take that specific articulations <obj /> node and paste it here....
 let elem1 = `<obj class="USlotVisuals" ID="2532053504">
 <int name="displaytype" value="1"/>
 <int name="articulationtype" value="0"/>
@@ -19,7 +19,7 @@ let elem1 = `<obj class="USlotVisuals" ID="2532053504">
 <int name="group" value="0"/>
 </obj>`;
 
-// Each articulation has a second node associated with it. It will go here...
+// Each articulation has a second node associated with it. That will go here...
 let elem2 = `<obj class="PSoundSlot" ID="2725730464">
 <obj class="PSlotThruTrigger" name="remote" ID="874768480">
    <int name="status" value="144"/>
