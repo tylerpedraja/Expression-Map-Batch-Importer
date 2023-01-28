@@ -9,7 +9,7 @@ const FILEPATH = `C:/Users/${USER}/Desktop/...`;
 // filepath of the directory you want to save the edited maps to.
 const OUTPUT_FOLDER = `C:/Users/${USER}/Desktop/...`;
 
-// Create the articulation/layering of whatever instrument you want in cubase, then open the file a code editor. Take the added <ob /> node and paste it here....
+// Create the articulation/layering of whatever instrument you want in cubase, then open the file a code editor. Take the articulations <obj /> node and paste it here....
 let elem1 = `<obj class="USlotVisuals" ID="2532053504">
 <int name="displaytype" value="1"/>
 <int name="articulationtype" value="0"/>
@@ -19,7 +19,7 @@ let elem1 = `<obj class="USlotVisuals" ID="2532053504">
 <int name="group" value="0"/>
 </obj>`;
 
-// The second node associated with the articulation goes here...
+// Each articulation has a second node associated with it. It will go here...
 let elem2 = `<obj class="PSoundSlot" ID="2725730464">
 <obj class="PSlotThruTrigger" name="remote" ID="874768480">
    <int name="status" value="144"/>
@@ -121,7 +121,6 @@ fs.readdir(FILEPATH, (err, files) => {
                var builder = new xml2js.Builder();
                var xml = builder.buildObject(json);
 
-
                fs.writeFile(path.join(OUTPUT_FOLDER, `__${file}`), xml, "utf8", (err) => {
                   if (err) throw err;
                   console.log(`${file} has been modified and saved to ${OUTPUT_FOLDER}`);
@@ -129,7 +128,6 @@ fs.readdir(FILEPATH, (err, files) => {
             })
          });
       }
-
    });
 });
 
