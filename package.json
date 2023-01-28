@@ -1,0 +1,21 @@
+{
+  "name": "expression_adder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dialogs": "^2.0.1",
+    "electron": "^22.1.0",
+    "eyes": "^0.1.8",
+    "fs": "0.0.1-security",
+    "inspect": "0.0.2",
+    "path": "^0.12.7",
+    "remote": "^0.2.6",
+    "xml2js": "^0.4.23"
+  }
+}
